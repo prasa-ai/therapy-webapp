@@ -1,0 +1,29 @@
+<div class="login-page">
+    <div class="login-container">
+        <h1 class="login-title">Login</h1>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <section class="login-form">
+                <div class="form-group">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" formControlName="username" class="input-textbox"/>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" formControlName="password" class="input-textbox"/>
+                </div>
+
+                <div class="forgot-psw-section">
+                    <a class="forgot-psw" tabindex="0">Forgot password?</a>
+                </div>
+            
+                <button type="submit" class="login-btn">Log in</button>
+            </section>
+        </form>
+
+        <div class="create-account-section">
+            <p class="question">New to Honeycomb? <a class="create-account" (click)="createAccount()" tabindex="0">Create an Account</a></p>
+        </div>
+    </div>
+</div>

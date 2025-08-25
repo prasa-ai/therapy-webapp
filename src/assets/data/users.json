@@ -1,0 +1,30 @@
+[
+    {
+        "firstname": "Jamie",
+        "lastname": "Plesko",
+        "username": "jamie",
+        "password": "jamie",
+        "admin": true
+    },
+    {
+        "firstname": "Jess",
+        "lastname": "Glover",
+        "username": "jess",
+        "password": "jess",
+        "admin": true
+    },
+    {
+        "firstname": "Random",
+        "lastname": "User",
+        "username": "random",
+        "password": "user",
+        "admin": false
+    },
+    {
+        "firstname": "Random2",
+        "lastname": "User2",
+        "username": "random2",
+        "password": "user2",
+        "admin": false
+    }
+]

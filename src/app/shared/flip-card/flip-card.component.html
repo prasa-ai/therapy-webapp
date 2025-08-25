@@ -1,0 +1,10 @@
+<div class="card" (click)="cardClicked()" [@cardFlip]="flipState">
+    <div class="face front">
+        <i class="fa-regular fa-user"></i>
+        <p>{{ frontContent }}</p>
+    </div>
+    <div class="face back">
+        <p class="card-details">{{ backContent }}</p>
+        <a class="details-link" routerLink="/services-and-resources">LEARN MORE</a> <!-- (click)="openDetails($event)" -->
+    </div>
+</div>

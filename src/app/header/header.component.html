@@ -1,0 +1,103 @@
+<!-- <header>
+    <nav>
+        <div class="left-section">
+            <div class="logo">
+                <a routerLink="/home">
+                    <img src="assets/images/6354186_bees_food_honey_honeycomb_icon.png" alt="Honeycomb Logo">
+                </a>
+            </div>
+            <div class="logo-text">
+                <a routerLink="/home">
+                    <p>Honeycomb</p>
+                </a>
+            </div>
+        </div>
+        <div class="right-section">
+            <ul class="nav-links">
+                <li><a routerLink="/practice">Practice</a></li>
+                <li><a routerLink="/home">Home</a></li>
+                <li><a routerLink="/services-and-resources">Services and resources</a></li>
+                <li *ngIf="authService.currentUser !== null && authService.userLogin"><a routerLink="/appointments">Appointments</a></li>
+                <li><a routerLink="/blog">Blog</a></li>
+                <li><a routerLink="/about-me">About us</a></li>
+                <li class="last-link"><a routerLink="/contacts">Contacts</a></li>
+            </ul>
+
+            <div class="login-icon" *ngIf="authService.currentUser !== null">
+                <a (click)="checkLogin()">
+                    <i class="fa-solid fa-circle-user fa-xl" style="color: #3E4D3A;"></i>
+                </a>
+            </div>
+
+            <ul *ngIf="!authService.adminLogin && !authService.userLogin" class="login">
+                <li><a routerLink="/login">Log in</a></li>
+            </ul>
+
+            <ul *ngIf="authService.adminLogin || authService.userLogin" class="logout">
+                <li (click)="logout()"><a>Log out</a></li>
+            </ul>
+        </div>
+    </nav>
+</header> -->
+
+
+
+
+<header>
+    <nav>
+        <div class="left-section">
+            <div class="logo">
+                <a routerLink="/home">
+                    <img src="assets/images/6354186_bees_food_honey_honeycomb_icon.png" alt="Honeycomb Logo">
+                </a>
+            </div>
+            <div class="logo-text">
+                <a routerLink="/home">
+                    <p>NeXphase</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="burger-menu" (click)="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <div class="right-section" [class.active]="menuActive">
+            <ul class="nav-links">
+                <li><a routerLink="/practice">Practice</a></li>
+                <li><a routerLink="/home">Home</a></li>
+                <li><a routerLink="/services-and-resources">Services and resources</a></li>
+                <li *ngIf="authService.currentUser !== null && authService.userLogin"><a routerLink="/appointments">Appointments</a></li>
+                <li><a routerLink="/blog">Blog</a></li>
+                <li><a routerLink="/about-me">About us</a></li>
+                <li class="last-link"><a routerLink="/contacts">Contacts</a></li>
+            </ul>
+
+            <div class="auth-section">
+                <div class="login-icon" *ngIf="authService.currentUser !== null">
+                    <a (click)="checkLogin()">
+                        <i class="fa-solid fa-circle-user fa-xl" style="color: #3E4D3A;"></i>
+                    </a>
+                </div>
+
+                <!-- <ul *ngIf="!authService.adminLogin && !authService.userLogin" class="login">
+                    <li><a routerLink="/login">Log in</a></li>
+                </ul> -->
+
+                <p-button class="p-button-sm" *ngIf="!authService.adminLogin && !authService.userLogin">
+                    Log in
+                </p-button>
+
+                <!-- <ul *ngIf="authService.adminLogin || authService.userLogin" class="logout">
+                    <li (click)="logout()"><a>Log out</a></li>
+                </ul> -->
+            </div>
+
+            <!-- <div class="dark-mode-section">
+                <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch> ADD FUNCTIONALITY TO TURN ON DARK MODE
+            </div> -->
+        </div>
+    </nav>
+</header>

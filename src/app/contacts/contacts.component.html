@@ -1,0 +1,18 @@
+<div class="contacts-page">
+    <h1 class="contacts-title">Contacts</h1>
+    <div class="contacts-container">
+        <div class="contacts-section">
+            <div class="left-selection">
+                <div class="contact-selection">
+                    <div class="option" (click)="selectOption('email')" routerLink="email">E-mail</div>
+                    <div class="option" (click)="selectOption('phone')" routerLink="phone">Phone</div>
+                </div>
+            </div>
+            <div class="right-selection">
+                <div class="contact-choice">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

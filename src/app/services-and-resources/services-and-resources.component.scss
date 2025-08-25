@@ -1,0 +1,192 @@
+.services-page {
+    width: 100%;
+    padding: 4rem 2rem;
+    margin-top: 80px;
+    background-color: var(--color-background-medium);
+
+    .services-title {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        font-weight: 550;
+        text-align: center;
+        color: var(--color-text-dark);
+        margin-bottom: 4rem;
+    }
+
+    .services-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto 4rem;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(42, 42, 42, 0.15);
+        overflow: hidden; // This prevents content from overflowing
+
+        .services-section {
+            width: 100%;
+            padding: 2rem;
+
+            .services-content {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                
+                &.reverse {
+                    flex-direction: row-reverse;
+                }
+
+                .services-writing {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+
+                    .services-subtitle {
+                        width: 100%;
+                        margin-bottom: 1.5rem;
+                        text-align: center;
+                        color: #3E4D3A;
+                        font-size: 2rem;
+                        font-weight: 550;
+                    }
+            
+                    .services-description {
+                        width: 100%;
+                        margin-bottom: 0;
+                        text-align: center;
+                        color: #6D8B74;
+                        font-size: 1.1rem;
+                        font-weight: 400;
+                        line-height: 1.6;
+                    }
+                }
+
+                .services-img {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+                    
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+
+    // Media queries for responsive design
+    @media screen and (max-width: 1024px) {
+        padding: 3rem 1.5rem;
+        
+        .services-title {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .services-container {
+            margin-bottom: 3rem;
+            
+            .services-section {
+                padding: 1.5rem;
+                
+                .services-content {
+                    gap: 1.5rem;
+                    
+                    .services-writing {
+                        .services-subtitle {
+                            font-size: 1.8rem;
+                            margin-bottom: 1rem;
+                        }
+                        
+                        .services-description {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        padding: 2.5rem 1rem;
+        
+        .services-title {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .services-container {
+            margin-bottom: 2.5rem;
+            
+            .services-section {
+                .services-content {
+                    flex-direction: column !important; // Force stacking on tablet/mobile
+                    
+                    .services-writing {
+                        order: 1; // Ensure text always appears first
+                        
+                        .services-subtitle {
+                            font-size: 1.6rem;
+                        }
+                    }
+                    
+                    .services-img {
+                        order: 2; // Image always appears second
+                        
+                        img {
+                            max-width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        padding: 2rem 1rem;
+        
+        .services-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        
+        .services-container {
+            margin-bottom: 2rem;
+            
+            .services-section {
+                padding: 1.2rem;
+                
+                .services-content {
+                    gap: 1rem;
+                    
+                    .services-writing {
+                        padding: 0.5rem;
+                        
+                        .services-subtitle {
+                            font-size: 1.4rem;
+                            margin-bottom: 0.8rem;
+                        }
+                        
+                        .services-description {
+                            font-size: 0.9rem;
+                        }
+                    }
+                    
+                    .services-img {
+                        padding: 0.5rem;
+                        
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

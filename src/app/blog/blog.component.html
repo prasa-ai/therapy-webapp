@@ -1,0 +1,27 @@
+<div class="blog-page">
+    <h1 class="blog-title">Blog</h1>
+
+        <ng-container *ngIf="!selectedPost; else fullPostView">
+            <div class="posts-list">
+                <div *ngFor="let post of paginatedPosts" class="list-item" (click)="viewPost(post)">
+                    <post (myChildClick)="clickedFromChild()" [postItem]="post"></post>
+                </div>
+            </div>
+            <p-paginator [rows]="rows" [totalRecords]="totalRecords"></p-paginator>
+        </ng-container>
+        
+        <ng-template #fullPostView>
+            <div class="full-post">
+                <h2>{{ selectedPost?.title }}</h2>
+                <p class="post-date">{{ selectedPost?.date }}</p>
+                <div class="post-content">
+                    {{ selectedPost?.content }}
+                </div>
+                <p-button
+                    label="Back"
+                    class="back-btn p-button-raised p-button-rounded"
+                    (click)="backToList()"
+                ></p-button>
+            </div>
+        </ng-template>
+</div>

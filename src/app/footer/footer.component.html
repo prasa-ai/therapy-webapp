@@ -1,0 +1,43 @@
+<footer>
+    <div class="footer-container">
+        <div class="row">
+            <div class="footer-column footer-links">
+                <h3>Quick Links</h3>
+                <div class="quick-links-container">
+                    <ul class="link-group">
+                        <li><a routerLink="/home">Home</a></li>
+                        <li><a routerLink="/our-services">Services and Resources</a></li>
+                        <li><a routerLink="/appointments">Blog</a></li>
+                    </ul>
+                    <ul class="link-group">
+                        <li><a routerLink="/appointments">Appointments</a></li>
+                        <li><a routerLink="/about-me">About us</a></li>
+                        <li><a routerLink="/contacts">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h3>Contact Us</h3>
+                <p>Phone: {{ phone | phone }}</p>
+                <p>Email: <a [href]="'mailto:' + email">{{ email }}</a></p>
+                <p>Address: <a [href]="'https://www.google.com/maps/search/' + address">{{ address }}</a></p>
+            </div>
+            
+            <div class="footer-column social-media">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <!-- <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a> -->
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="terms-privacy">
+        <a routerLink="/privacy-policy">Privacy Policy</a>
+        <a routerLink="/terms-of-service">Terms of Service</a>
+    </div>
+</footer>

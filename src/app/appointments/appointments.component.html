@@ -1,0 +1,186 @@
+<div class="appointments-page">
+    <h1 class="appointments-title">Appointments</h1>
+    <div class="appointments-container">
+        <div class="page-header">
+            <p class="appointments-description">Choose a date and time to book your next appointment.</p>
+        </div>
+        <div class="appointments-section">
+            <div class="calendar">
+                <p-calendar
+                    [minDate]="minDateSelectable"
+                    [(ngModel)]="selectedDate"
+                    [inline]="true"
+                    (onSelect)="onDateSelect()"
+                    [disabledDays]="disabledDays"
+                    [readonlyInput]="true">
+                    <ng-template pTemplate="date" let-date>
+                        <span 
+                            [ngClass]="{
+                                'holiday-date': isHoliday(date), 
+                                'p-highlight': isSelected(date) || (isHoliday(date) && isSelected(date)),
+                                'holiday-selected': isSelected(date) && isHoliday(date)
+                            }"
+                            [style.pointer-events]="isHoliday(date) ? 'none' : 'auto'">
+                            {{date.day}}
+                        </span>
+                    </ng-template>
+                </p-calendar>
+            </div>
+            <!-- Only show steps-container if a date is selected -->
+            <div class="steps-container" *ngIf="isDateSelected">
+                <p-steps [(activeIndex)]="activeIndex" [model]="steps"></p-steps>
+                
+                <!-- Step Content (Select Time) -->
+                <div *ngIf="isDateSelected && activeIndex === 0 && !isBookingConfirmed" class="step-content">
+                    <div *ngIf="noAvailableSlots" class="no-slots-message">
+                        There are no time slots available for the selected date.
+                    </div>
+                    <ul class="ul-class" *ngIf="!noAvailableSlots">
+                        <li 
+                            class="li-class"
+                            *ngFor="let slot of availableTimeSlots" 
+                            [ngClass]="{'unavailable': bookedSlotsByDate[selectedDate.toDateString()].includes(slot)}"
+                            (click)="selectTimeSlot(slot)"
+                            [class.selected]="slot === selectedTimeSlot"
+                            [attr.disabled]="bookedSlotsByDate[selectedDate.toDateString()].includes(slot) ? true : null">
+                            {{ slot }}
+                        </li>
+                    </ul>
+                    <div class="button-container" data-step="1" *ngIf="!noAvailableSlots">
+                        <button class="back-next-button" pButton type="button" label="Next" icon="pi pi-arrow-right" iconPos="right" (click)="nextStep()"></button>
+                    </div>
+                </div>
+
+                <!-- Step Content (Personal Information) -->
+                <div *ngIf="activeIndex === 1" class="step-content">
+                    <form [formGroup]="personalInfoForm" class="personal-info-form">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input 
+                                id="firstName"
+                                type="text"
+                                pInputText
+                                formControlName="firstName"
+                                [ngClass]="{ 'ng-invalid ng-dirty': submitted && f['firstName'].errors }"
+                            />
+                            <small class="p-error" *ngIf="submitted && f['firstName'].errors?.['required']">
+                                First name is required
+                            </small>
+                            <small class="p-error" *ngIf="submitted && f['firstName'].errors?.['pattern']">
+                                First name can only contain letters
+                            </small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input 
+                                id="lastName"
+                                type="text"
+                                pInputText
+                                formControlName="lastName"
+                                [ngClass]="{ 'ng-invalid ng-dirty': submitted && f['lastName'].errors }"
+                            />
+                            <small class="p-error" *ngIf="submitted && f['lastName'].errors?.['required']">
+                                Last name is required
+                            </small>
+                            <small class="p-error" *ngIf="submitted && f['lastName'].errors?.['pattern']">
+                                Last name can only contain letters
+                            </small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input 
+                                id="phoneNumber"
+                                type="tel"
+                                pInputText
+                                formControlName="phoneNumber"
+                                [ngClass]="{ 'ng-invalid ng-dirty': submitted && f['phoneNumber'].errors }"
+                            />
+                            <small class="p-error" *ngIf="submitted && f['phoneNumber'].errors?.['required']">
+                                Phone number is required
+                            </small>
+                            <small class="p-error" *ngIf="submitted && f['phoneNumber'].errors?.['pattern']">
+                                Please enter a valid 10-digit phone number
+                            </small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input 
+                                id="email"
+                                type="email"
+                                pInputText
+                                formControlName="email"
+                                [ngClass]="{ 'ng-invalid ng-dirty': submitted && f['email'].errors }"
+                            />
+                            <small class="p-error" *ngIf="submitted && f['email'].errors?.['required']">
+                                Email is required
+                            </small>
+                            <small class="p-error" *ngIf="submitted && f['email'].errors?.['email']">
+                                Please enter a valid email address
+                            </small>
+                        </div>
+                    </form>
+                    <div class="button-container" data-step="2">
+                        <button class="back-next-button" pButton type="button" label="Back" icon="pi pi-arrow-left" (click)="backStep()"></button>
+                        <button class="back-next-button" pButton type="button" label="Next" icon="pi pi-arrow-right" iconPos="right" (click)="nextStep()"></button>
+                    </div>
+                </div>
+
+                <!-- Step Content (Review) -->
+                <div *ngIf="activeIndex === 2 && !isBookingConfirmed" class="step-content">
+                    <div>
+                        <p class="confirmation-instructions">Review the information, then click the "Confirm" button to finish booking your appointment.</p>
+                    </div>
+                    <div class="review-section">
+                        <p class="input-title">Date:</p>
+                        <p class="input-value">{{ getFormattedDate() }}</p>
+                        <p class="input-title">Time:</p>
+                        <p class="input-value">{{ selectedTimeSlot }}</p>
+                        <p class="input-title">First name:</p>
+                        <p class="input-value">{{ firstName }}</p>
+                        <p class="input-title">Last name:</p>
+                        <p class="input-value">{{ lastName }}</p>
+                        <p class="input-title">Phone number:</p>
+                        <p class="input-value">{{ phoneNumber }}</p>
+                        <p class="input-title">Email:</p>
+                        <p class="input-value">{{ email }}</p>
+                    </div>
+                    <!-- When confirm btn is clicked, an email is sent to the user and the app owner with the details. -->
+                    <div class="button-container" data-step="3">
+                        <button class="back-next-button" pButton type="button" label="Back" icon="pi pi-arrow-left" (click)="backStep()"></button>
+                        <button class="confirm-button" pButton type="button" label="Confirm" icon="pi pi-check" (click)="confirmBooking()"></button>
+                    </div>
+                </div>
+
+                <!-- Success message -->
+                <div *ngIf="isBookingConfirmed && !isBookingFailed" class="confirmation-message">
+                    <h3>Booking Confirmed!</h3>
+                    <p>Your appointment has been successfully scheduled.</p>
+                    <p>You will receive a confirmation email containing the details of your appointment.</p>
+                    <button 
+                        class="new-booking-button" 
+                        pButton 
+                        type="button" 
+                        label="Start New Booking" 
+                        (click)="resetBookingProcess()">
+                    </button>
+                </div>
+
+                <!-- Failure message -->
+                <div *ngIf="isBookingFailed" class="failure-message">
+                    <h3>Booking Failed</h3>
+                    <p>Unfortunately we weren't able to book this appointment. Please try again.</p>
+                    <button 
+                        class="go-back-button" 
+                        pButton 
+                        type="button" 
+                        label="Go Back" 
+                        (click)="goBackToStart()">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

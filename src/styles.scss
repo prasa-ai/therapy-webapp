@@ -1,0 +1,84 @@
+
+@import './primeng-button.scss';
+
+
+:root {
+    --color-background-dark: #f7f3e6;
+    --color-background-medium: #fbf8ef;
+    --color-background-light: #fbfaf5;
+    --color-background-footer: #f8f8f8;
+    --color-primary: #6D8B74;
+    --color-secondary: #A67C52;
+    --color-text-dark: #3E4D3A;
+    --color-text-light: #FAF3E0;
+
+    --font-primary: "SUSE", sans-serif;
+    --font-secondary: 'Open Sans', 'Poppins', sans-serif;
+}
+
+
+
+html, body {
+    height: 100%;
+    font-family: var(--font-secondary);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color-text-dark);
+    background-color: var(--color-background-medium);
+    line-height: 1.6;
+}
+
+app-root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-primary);
+    color: var(--color-text-dark);
+}
+
+/* Existing Poppins font classes */
+.poppins-thin { font-family: "Poppins", sans-serif; font-weight: 100; font-style: normal; }
+.poppins-extralight { font-family: "Poppins", sans-serif; font-weight: 200; font-style: normal; }
+/* ... (rest of your existing Poppins classes) */
+
+/* Accessibility and Subtle Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.7s ease-out;
+}
+
+/* Accessibility Utilities */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

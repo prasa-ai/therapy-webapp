@@ -1,0 +1,55 @@
+<!-- brain-parallax.component.html -->
+<div class="parallax-container" #parallaxContainer>
+    <!-- Background Sky Layer (slowest) -->
+    <div class="parallax-layer sky-layer" #skyLayer>
+      <div class="sky-gradient"></div>
+      <div class="sun"></div>
+      <div class="cloud cloud-1"></div>
+      <div class="cloud cloud-2"></div>
+      <div class="cloud cloud-3"></div>
+    </div>
+  
+    <!-- Mountain Layers (medium speed) -->
+    <div class="parallax-layer mountain-layer-back" #mountainBack>
+      <div class="mountain-range back-mountains"></div>
+    </div>
+    
+    <div class="parallax-layer mountain-layer-mid" #mountainMid>
+      <div class="mountain-range mid-mountains"></div>
+    </div>
+  
+    <!-- Brain Layer (medium-fast speed) -->
+    <div class="parallax-layer brain-layer" #brainLayer>
+      <div class="brain-container">
+        <div class="brain-silhouette">
+          <div class="brain-waves">
+            <div class="brain-spiral spiral-1"></div>
+            <div class="brain-spiral spiral-2"></div>
+            <div class="brain-spiral spiral-3"></div>
+            <div class="brain-spiral spiral-4"></div>
+          </div>
+        </div>
+        <div class="head-silhouette"></div>
+      </div>
+    </div>
+  
+    <!-- Foreground Foliage Layer (fastest) -->
+    <div class="parallax-layer foliage-layer" #foliageLayer>
+      <div class="plant plant-1"></div>
+      <div class="plant plant-2"></div>
+      <div class="plant plant-3"></div>
+      <div class="plant plant-4"></div>
+      <div class="plant plant-5"></div>
+    </div>
+  
+    <!-- Content Overlay -->
+    <div class="content-overlay">
+      <div class="hero-content">
+        <h1 class="hero-title">{{ title || 'Nurture Your Mental Wellness' }}</h1>
+        <p class="hero-subtitle">{{ subtitle || 'Discover the path to inner peace and mental clarity' }}</p>
+        <button class="hero-cta" (click)="onCtaClick()">
+          {{ ctaText || 'Begin Your Journey' }}
+        </button>
+      </div>
+    </div>
+  </div>

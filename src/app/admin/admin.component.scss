@@ -1,0 +1,27 @@
+.admin-page {
+    width: 100%;
+    padding: 4rem;
+    margin-top: 80px;
+    background-color: var(--color-background-medium);
+
+    .admin-title {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        font-weight: 550;
+        text-align: center;
+        color: var(--color-text-dark);
+        margin-bottom: 4rem;
+    }
+
+    .admin-container {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: 4px 4px 10px rgba(42, 42, 42, 0.2);
+        margin-bottom: 4rem;
+    }
+}

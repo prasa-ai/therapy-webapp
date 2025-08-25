@@ -1,0 +1,25 @@
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.6rem;
+        color: var(--color-text-dark);
+        font-family: var(--font-primary);
+    }
+
+    .post-date {
+        font-size: 0.9rem;
+        color: gray;
+        font-family: var(--font-secondary);
+    }
+}
+
+p {
+    margin: 0.5rem 0 0;
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    color: #333;
+}

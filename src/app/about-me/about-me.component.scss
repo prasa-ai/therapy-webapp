@@ -1,0 +1,134 @@
+.about-page {
+    width: 100%;
+    padding: 4rem;
+    margin-top: 80px;
+    background-color: var(--color-background-medium);
+
+    .about-title {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        font-weight: 550;
+        text-align: center;
+        color: var(--color-text-dark);
+        margin-bottom: 4rem;
+    }
+
+    .about-container {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: 4px 4px 10px rgba(42, 42, 42, 0.2);
+        margin-bottom: 4rem;
+
+        .about-section {
+            padding: 1rem 3rem 1rem 3rem;
+
+            .about-writing {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+
+                .about-subtitle {
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    color: #3E4D3A;
+                    font-size: 2rem;
+                    font-weight: 550;
+                }
+        
+                .about-description {
+                    padding-left: 3rem;
+                    padding-right: 3rem;
+                    text-align: justify;
+                    color: #6D8B74;
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                }
+            }
+
+            .about-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 23rem;
+                height: 23rem;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+            }
+        }
+
+        .resume {
+            padding: 2rem;
+            width: 100%;
+        }
+    }
+}
+
+:host ::ng-deep {
+    .about-writing {
+        .p-button {
+            background: #A67C52;
+            border: none;
+            transition: all 0.3s ease;
+            height: 2.5rem;
+            width: 12rem;
+            margin-top: 2rem;
+            
+            &:hover {
+                background: #A67C52;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 15px rgba(23, 19, 4, 0.3);
+            }
+            
+            &:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 8px rgba(23, 19, 4, 0.3);
+            }
+
+            .p-button-label {
+                font-weight: 600;
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+                color: #FAF3E0;
+            }
+        }
+    }
+
+    .resume {
+        .back-btn {
+            .p-button {
+                background: #A67C52;
+                border: none;
+                transition: all 0.3s ease;
+                height: 2.5rem;
+                width: 5rem;
+                margin-top: 2rem;
+
+                &:hover {
+                    background: #A67C52;
+                    transform: translateY(-2px);
+                    box-shadow: 0 4px 15px rgba(23, 19, 4, 0.3);
+                }
+                
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: 0 2px 8px rgba(23, 19, 4, 0.3);
+                }
+
+                .p-button-label {
+                    font-weight: 600;
+                    font-size: 1rem;
+                    letter-spacing: 0.5px;
+                    color: #FAF3E0;
+                }
+            }
+        }  
+    }
+}

@@ -1,0 +1,310 @@
+@import './../../primeng-button.scss';
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #2d361f;
+  
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        position: relative;
+    
+        .left-section {
+            display: flex;
+            align-items: center;
+            z-index: 1001; // Keep logo above mobile menu
+    
+            .logo {
+                margin-right: 1rem;
+            
+                img {
+                    max-height: 40px;
+                }
+            }
+
+            .logo-text {
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    p {
+                        margin: 0;
+                        font-size: 2.0rem;
+                        font-weight: 600;
+                        font-family: 'Montserrat', sans-serif;
+                        color: #bac0b8;
+                        transition: color 0.3s ease;
+                    }
+
+                    &:hover p {
+                        color: #A67C52;
+                    }
+                }
+            }
+        }
+        
+        .burger-menu {
+            display: none; // Hidden on desktop
+            flex-direction: column;
+            justify-content: space-between;
+            height: 24px;
+            width: 30px;
+            cursor: pointer;
+            z-index: 1001; // Keep burger above mobile menu
+            
+            .bar {
+                width: 100%;
+                height: 3px;
+                background-color: #3E4D3A;
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+            
+            &.active {
+                .bar:nth-child(1) {
+                    transform: translateY(10px) rotate(45deg);
+                }
+                
+                .bar:nth-child(2) {
+                    opacity: 0;
+                }
+                
+                .bar:nth-child(3) {
+                    transform: translateY(-10px) rotate(-45deg);
+                }
+            }
+        }
+  
+        .right-section {
+            display: flex;
+            align-items: center;
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                ::first-letter {
+                    color: #A67C52;
+                }
+    
+                li {
+                    margin-left: 2rem;
+
+                    a {
+                        text-decoration: none;
+                        font-family: 'Open Sans', sans-serif;
+                        color: #f9f9f9;
+                        font-weight: 550;
+                        position: relative;
+                        padding-bottom: 0.25rem;
+                    }
+
+                    :hover {
+                        color: #A67C52;
+                    }
+
+                    ::before {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: #A67C52;
+                        transform: scaleX(0);
+                        transition: transform 0.3s ease;
+                    }
+
+                    :hover::before {
+                        transform: scaleX(1);
+                    }
+                }
+
+                .last-link {
+                    margin-right: 1rem;
+                }
+            }
+
+            .auth-section {
+                display: flex;
+                align-items: center;
+                
+                .login-icon {
+                    margin-right: 0.5rem;
+
+                    i {
+                        cursor: pointer;
+                    }
+                }
+
+                .login, .logout {
+                    display: flex;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+                    ::first-letter {
+                        color: #A67C52;
+                    }
+        
+                    li {
+                        a {
+                            text-decoration: none;
+                            font-family: 'Open Sans', sans-serif;
+                            color: #f9f9f9;
+                            font-weight: 550;
+                            position: relative;
+                            padding-bottom: 0.25rem;
+                            cursor: pointer;
+                        }
+
+                        :hover {
+                            color: #A67C52;
+                        }
+
+                        ::before {
+                            content: "";
+                            position: absolute;
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: #A67C52;
+                            transform: scaleX(0);
+                            transition: transform 0.3s ease;
+                        }
+
+                        :hover::before {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Media queries for responsive design
+@media screen and (max-width: 991px) {
+    header {
+        nav {
+            padding: 1rem;
+            
+            .burger-menu {
+                display: flex; // Show on mobile
+                position: relative; // Keep in normal flow
+                right: 0; // Ensure it's visible and aligned to the right
+            }
+            
+            .right-section {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 250px;
+                height: 100vh;
+                background-color: #ffffff;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 80px 20px 20px;
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                overflow-y: auto;
+                
+                &.active {
+                    right: 0;
+                }
+                
+                .nav-links {
+                    flex-direction: column;
+                    width: 100%;
+                    
+                    li {
+                        margin: 0 0 1.5rem 0;
+                        
+                        a {
+                            font-size: 1.1rem;
+                            display: block;
+                            padding: 0.5rem 0;
+                        }
+                    }
+                    
+                    .last-link {
+                        margin-right: 0;
+                    }
+                }
+                
+                .auth-section {
+                    width: 100%;
+                    margin-top: 1rem;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    
+                    .login-icon {
+                        margin: 0 0 1rem 0;
+                    }
+                    
+                    .login, .logout {
+                        width: 100%;
+                        margin: 0;
+                        
+                        li {
+                            margin: 0;
+                            width: 100%;
+                            
+                            a {
+                                font-size: 1.1rem;
+                                display: block;
+                                padding: 0.5rem 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        nav {
+            .left-section {
+                .logo {
+                    margin-right: 0.5rem;
+                    
+                    img {
+                        max-height: 30px;
+                    }
+                }
+                
+                .logo-text {
+                    a {
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            
+            .burger-menu {
+                display: flex; // Ensure it's visible on smallest screens too
+            }
+            
+            .right-section {
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+    }
+}
