@@ -19,10 +19,9 @@
 			<div class="hero-image-container">
 				<video 
 				class="hero-video"
-				src="assets/images/hero-video-4.mp4"
+				src="assets/images/hero-video-5-test.mp4"
 				autoplay 
 				muted 
-				loop 
 				playsinline
 				(loadeddata)="onVideoLoaded()"
 				(error)="onVideoError($event)">
@@ -44,33 +43,40 @@
 
 			<!-- Hero Content Overlay -->
 			<div class="hero-content">
-			<div class="hero-text-container">
-				<h1 class="hero-title">Welcome to NeXphase Therapy</h1>
-				<h2 class="hero-subtitle">Your Trusted Mental Health Partner</h2>
-				
-				<!-- Animated Words Section -->
-				<div class="animated-words-container">
-					<div 
-						*ngIf="showAnimatedWord && currentWordType === 'challenge'" 
-						class="animated-word challenge-word"
-						[@fadeInOut]
-						[@pulseGlow]>
-						{{ currentWord }}
+				<div class="row">
+					<div class="col-md-7">
+						<div class="hero-text-container">
+							<h1 class="hero-title">Welcome to NeXphase Therapy</h1>
+							<h2 class="hero-subtitle">Your Trusted Mental Health Partner</h2>
+							<p-button 
+							label="Begin Your Journey"
+							class="btn-journey"
+							(click)="getData()"
+							></p-button>
+						</div>
 					</div>
-					<div 
-						*ngIf="showAnimatedWord && currentWordType === 'support'" 
-						class="animated-word support-message"
-						[@slideInOut]>
-						{{ currentWord }}
+					<div class="col-md-4">
+						<!-- Animated Words Section -->
+						<div class="animated-words-container">
+							<div 
+								*ngIf="showAnimatedWord && currentWordType === 'challenge'" 
+								class="animated-word challenge-word"
+								[@fadeInOut]
+								[@pulseGlow]>
+								{{ currentWord }}
+							</div>
+							<div 
+								*ngIf="showAnimatedWord && currentWordType === 'support'" 
+								class="animated-word support-message"
+								[@slideInOut]>
+								{{ currentWord }}
+							</div>
+						</div>
 					</div>
 				</div>
-			
-				<p-button 
-				label="Begin Your Journey"
-				class="btn-journey"
-				(click)="getData()"
-				></p-button>
-			</div>
+
+
+				
 			</div>
 		</div>
 	</div>

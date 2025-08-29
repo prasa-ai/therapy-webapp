@@ -47,7 +47,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
     ]),
     trigger('pulseGlow', [
       transition('* => *', [
-        animate('1200ms ease-in-out', keyframes([
+        animate('600ms ease-in-out', keyframes([
           style({ transform: 'scale(1)', opacity: 1, offset: 0 }),
           style({ transform: 'scale(1.05)', opacity: 0.8, offset: 0.3 }),
           style({ transform: 'scale(1.02)', opacity: 0.9, offset: 0.7 }),
@@ -131,7 +131,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   // Mental health challenges and supportive messages
   mentalHealthChallenges = [
-    { word: 'Trauma', color: '#E74C3C', shadow: 'rgba(231, 76, 60, 0.3)' },
+    { word: 'Trauma', color: '#700000', shadow: 'rgba(231, 76, 60, 0.3)' },
     { word: 'Depression', color: '#3498DB', shadow: 'rgba(52, 152, 219, 0.3)' },
     { word: 'Anxiety', color: '#F39C12', shadow: 'rgba(243, 156, 18, 0.3)' },
     { word: 'PTSD', color: '#9B59B6', shadow: 'rgba(155, 89, 182, 0.3)' },
@@ -144,17 +144,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     { 
       message: "You don't have to face this alone", 
       color: '#27AE60', 
-      shadow: 'rgba(39, 174, 96, 0.4)' 
+      shadow: 'rgba(39, 174, 96, 0.2)' 
     },
     { 
       message: "Healing is possible", 
       color: '#3498DB', 
-      shadow: 'rgba(52, 152, 219, 0.4)' 
+      shadow: 'rgba(52, 152, 219, 0.2)' 
     },
     { 
       message: "Your mental health matters", 
       color: '#E74C3C', 
-      shadow: 'rgba(231, 76, 60, 0.4)' 
+      shadow: 'rgba(231, 76, 60, 0.3)' 
     },
     { 
       message: "Take it one day at a time", 
@@ -164,12 +164,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     { 
       message: "You are stronger than you know", 
       color: '#F39C12', 
-      shadow: 'rgba(243, 156, 18, 0.4)' 
+      shadow: 'rgba(243, 156, 18, 0.3)' 
     },
     { 
       message: "Recovery is a journey, not a destination", 
       color: '#1ABC9C', 
-      shadow: 'rgba(26, 188, 156, 0.4)' 
+      shadow: 'rgba(26, 188, 156, 0.2)' 
     },
     { 
       message: "You deserve support and care", 
