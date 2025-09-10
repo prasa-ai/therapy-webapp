@@ -1,21 +1,10 @@
+
+<!-- UPDATED home.component.html -->
 <div class="outer-div container-fluid">
-
-
 	<!-- Main Hero Container - Now contains both hero and animation sections -->
 	<div class="main-hero-container">
-		<!-- Hero Section with Full-Screen Image -->
+		<!-- Hero Section with Full-Screen Video -->
 		<div class="hero-section">
-			<!-- <div class="hero-image-container">
-			<img 
-				class="hero-image" 
-				src="assets/images/hero-image-2.jpeg" 
-				alt="Peaceful therapy environment"
-			>
-			
-			<div class="hero-fallback-bg"></div>
-			</div> -->
-			
-
 			<div class="hero-image-container">
 				<video 
 				class="hero-video"
@@ -30,66 +19,120 @@
 				<div class="hero-fallback-bg"></div>
 			</div>
 
-
-				<!-- <app-web-parallax
-					[title]="'Welcome to NeXphase Therapy'"
-					[subtitle]="'Discover the path to inner peace and mental clarity'"
-					[ctaText]="'Begin Your Healing Journey'"
-					(ctaClick)="onGetStarted()">
-				</app-web-parallax> -->
-
-
-
-
 			<!-- Hero Content Overlay -->
 			<div class="hero-content">
-				<div class="row">
-					<div class="col-md-7">
+				<div class="hero-row">
+					<!-- Hero Text Section -->
+					<div class="hero-text-section">
 						<div class="hero-text-container">
 							<h1 class="hero-title">Welcome to NeXphase Therapy</h1>
 							<h2 class="hero-subtitle">Your Trusted Mental Health Partner</h2>
 							<p-button 
-							label="Begin Your Journey"
-							class="btn-journey"
-							(click)="getData()"
-							></p-button>
+								label="Begin Your Journey"
+								class="btn-journey"
+								(click)="getData()">
+							</p-button>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<!-- Animated Words Section -->
+					
+					<!-- Animated Words Section -->
+					<div class="animated-words-section">
 						<div class="animated-words-container">
 							<div 
 								*ngIf="showAnimatedWord && currentWordType === 'challenge'" 
-								class="animated-word challenge-word"
+								class="challenge-word"
 								[@fadeInOut]
 								[@pulseGlow]>
 								{{ currentWord }}
 							</div>
 							<div 
 								*ngIf="showAnimatedWord && currentWordType === 'support'" 
-								class="animated-word support-message"
+								class="support-message"
 								[@slideInOut]>
 								{{ currentWord }}
 							</div>
 						</div>
 					</div>
 				</div>
-
-
-				
 			</div>
 		</div>
 	</div>
 	
-	
+
+	<div class="who-we-are">
+		<h1 class="who-we-are-title">Who We are</h1>
+		<h5 class="who-we-are-punch-line">Results-Driven. Evidence-Based. Deeply Human. Trauma-Informed. Solution-Focused. Relentlessly Compassionate. </h5>
+
+		<p class="who-we-are-description">
+			Your healing journey deserves more than generic approaches and surface-level 
+			conversations. At NeXphase Therapy, we don't just listen—we truly see you, 
+			meet you exactly where you are, and walk alongside you as you reclaim your 
+			strength. Every session is crafted around your unique story, your specific 
+			needs, and your personal definition of breakthrough. Here, vulnerability 
+			isn't just welcomed—it's honored as the gateway to profound transformation. 
+			You're not broken; you're beautifully human, and you deserve a therapist 
+			who believes in your capacity to not just survive, but to thrive beyond 
+			what you ever thought possible. Your courage to seek help has already begun 
+			your healing—now let us help you finish what you've started.
+		</p>
+		<p-button 
+			label="Book Your First Session"
+			class="btn-book-session center"
+			(click)="getData()">
+		</p-button>
+
+		
+	</div>
 
 
-	
+	<!--Why choose us -->
+	<div class="why-honeycomb">
+		<h1 class="why-honeycomb-title">Why Choose Us?</h1>
+
+		<div class="why-honeycomb-section row">
+			<div class="why-honeycomb-writing col-md-7 col-12 order-md-1 order-2">
+				<h2 class="why-honeycomb-subtitle">We Value Your Privacy</h2>
+				<p class="why-honeycomb-description">At Nexphase, privacy isn't just a policy—it's your fundamental right, and 
+					we defend it as fiercely as you would. Privacy is sacred to us and it isn't negotiable. So you can be your
+					complete self during your sessions.</p>
+			</div>
+			<div class="why-honeycomb-img-right col-md-5 col-12 order-md-2 order-1">
+				<img class="why-honeycomb-img" src="assets/images/undraw_security_0ubl.svg" alt="Privacy Image">
+			</div>
+		</div>
+
+		<div class="why-honeycomb-section row">
+			<div class="why-honeycomb-img-left col-md-5 col-12">
+				<img class="why-honeycomb-img" src="assets/images/undraw_social-networking_v4z1.svg" alt="Session Image">
+			</div>
+			<div class="why-honeycomb-writing col-md-7 col-12">
+				<h2 class="why-honeycomb-subtitle">Online and In-Person sessions</h2>
+				<p class="why-honeycomb-description">We understand everyone has different needs and we are here to help you in the way that best fits your schedule.</p>
+			</div>
+		</div>
+
+		<div class="why-honeycomb-section row">
+			<div class="why-honeycomb-writing col-md-7 col-12 order-md-1 order-2">
+				<h2 class="why-honeycomb-subtitle">Experienced professionals</h2>
+				<p class="why-honeycomb-description">Over 15 years of experience, we have extensive expertise in handling a wide range of cases with varying levels of complexity. This enables us to recognize the importance of a personalized approach for each case.</p>
+			</div>
+			<div class="why-honeycomb-img-right col-md-5 col-12 order-md-2 order-1">
+				<img class="why-honeycomb-img" src="assets/images/undraw_instant-analysis_idb3.svg" alt="Privacy Image">
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="header">
+		<h2 class="header-title">Our Services</h2>
+	</div>
 	
 	<div class='cards-section'>
 		<div class="cards-container">
 			<div class="description">
-				<h2 class="description-title">Our Services</h2>
 				<p class="description-paragraph">Explore our range of therapeutic services designed to support your well-being journey.</p>
 			</div>
 			
@@ -110,40 +153,18 @@
 	  	{{ cardDetail }}
 	</div>
 
-	<div class="why-honeycomb">
-		<h1 class="why-honeycomb-title">Why Choose Us?</h1>
-
-		<div class="why-honeycomb-section row">
-			<div class="why-honeycomb-writing col-md-7 col-12 order-md-1 order-2">
-				<h2 class="why-honeycomb-subtitle">We Value Your Privacy</h2>
-				<p class="why-honeycomb-description">We know how important it is to respect our clients' privacy, and we do our best to make them feel secure.</p>
-			</div>
-			<div class="why-honeycomb-img-right col-md-5 col-12 order-md-2 order-1">
-				<img class="why-honeycomb-img" src="assets/images/undraw_security_0ubl.svg" alt="Privacy Image">
-			</div>
-		</div>
-
-		<div class="why-honeycomb-section row">
-			<div class="why-honeycomb-img-left col-md-5 col-12">
-				<img class="why-honeycomb-img" src="assets/images/undraw_social-networking_v4z1.svg" alt="Session Image">
-			</div>
-			<div class="why-honeycomb-writing col-md-7 col-12">
-				<h2 class="why-honeycomb-subtitle">Online and In-Person sessions</h2>
-				<p class="why-honeycomb-description">We understand everyone has different needs and are here to help you in the way that best fits your schedule.</p>
-			</div>
-		</div>
-
-		<div class="why-honeycomb-section row">
-			<div class="why-honeycomb-writing col-md-7 col-12 order-md-1 order-2">
-				<h2 class="why-honeycomb-subtitle">Experienced professionals</h2>
-				<p class="why-honeycomb-description">We have extensive experience handling a wide range of cases with varying levels of complexity. This enables us to recognize the importance of a personalized approach for each case.</p>
-			</div>
-			<div class="why-honeycomb-img-right col-md-5 col-12 order-md-2 order-1">
-				<img class="why-honeycomb-img" src="assets/images/undraw_instant-analysis_idb3.svg" alt="Privacy Image">
-			</div>
-		</div>
-	</div>
+	
 </div>
+
+
+
+
+
+
+
+
+
+
 
 
 

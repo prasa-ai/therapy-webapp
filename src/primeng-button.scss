@@ -3,17 +3,18 @@
 
 // Color Variables
 :root {
-    --button-text-color: #585151;
-    --button-bg-color: #D6E0B8;
-    --button-border-color: #D1D1D1;
-    --button-hover-bg: #C8D4A5;
-    --button-hover-border: #B8B8B8;
+    --button-text-color: #efebeb;
+    --button-bg-color: #2D361F;// #D6E0B8;
+    --button-border-color: #2D361F;// #D1D1D1;
+    --button-hover-bg: #A67C52; // #C8D4A5;
+    --button-hover-border: #A67C52;
+    --button-hover-text-color: #e4eada;
     --button-active-bg: #BAC892;
     --button-focus-shadow: rgba(214, 224, 184, 0.4);
     --button-disabled-bg: #E8E8E8;
     --button-disabled-text: #A0A0A0;
 
-    --card-bg-color:  #D6E0B8;
+    --card-bg-color: #DFE0AD;// #D6E0B8;
     --card-border-color: #D1D1D1;
     --card-text-color: #252323;
 
@@ -47,6 +48,7 @@
       &:hover {
         background: var(--button-hover-bg) !important;
         border-color: var(--button-hover-border) !important;
+        color: var(--button-hover-text-color) !important;
         color: var(--button-text-color) !important;
         transform: translateY(-1px) !important;
         box-shadow: 0 4px 8px rgba(88, 81, 81, 0.15) !important;

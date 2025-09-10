@@ -169,10 +169,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     { 
       message: "Recovery is a journey, not a destination", 
       color: '#1ABC9C', 
-      shadow: 'rgba(26, 188, 156, 0.2)' 
+      shadow: 'rgba(155, 89, 182, 0.4)'  
     },
     { 
       message: "You deserve support and care", 
+      color: '#E67E22', 
+      shadow: 'rgba(230, 126, 34, 0.4)' 
+    },
+    { 
+      message: "", 
       color: '#E67E22', 
       shadow: 'rgba(230, 126, 34, 0.4)' 
     }
@@ -223,7 +228,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         
         // Set dynamic styles
         this.setWordStyles(challenge.color, challenge.shadow);
-        
+
         this.currentWordIndex++;
         
         // After showing all challenges, switch to support messages
@@ -231,6 +236,18 @@ export class HomeComponent implements OnInit, OnDestroy {
           this.currentWordType = 'support';
           this.currentWordIndex = 0;
         }
+
+        
+
+        // if(this.currentWordIndex > this.mentalHealthChallenges.length) {
+        //   this.currentWordType = 'support';
+        //   this.currentWordIndex = 0;
+        // }
+
+        console.log(this.currentWordIndex);
+        console.log(this.currentWordType);
+      
+        
       } else {
         // Show supportive messages
         const message = this.supportiveMessages[this.currentWordIndex];
@@ -238,8 +255,10 @@ export class HomeComponent implements OnInit, OnDestroy {
         
         // Set dynamic styles
         this.setWordStyles(message.color, message.shadow);
+
         
         this.currentWordIndex++;
+        console.log(this.currentWordIndex);
         
         // After showing all support messages, go back to challenges
         if (this.currentWordIndex >= this.supportiveMessages.length) {

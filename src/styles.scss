@@ -12,15 +12,56 @@
     --color-text-dark: #3E4D3A;
     --color-text-light: #FAF3E0;
 
-    --font-primary: "SUSE", sans-serif;
+    // --font-primary: "SUSE", sans-serif;
+    --font-primary: "Dosis", sans-serif;
     --font-secondary: 'Open Sans', 'Poppins', sans-serif;
+
+    --font-primary-petit-cursive: "Petit Formal Script", cursive; 
+    --font-primary-Poiret: "Poiret One", sans-serif;
+    
+
+     /* You can also add SUSE weight variations */
+    --font-primary-light: "Dosis", sans-serif;
+    --font-primary-regular: "Dosis", sans-serif;
+    --font-primary-bold: "Dosis", sans-serif;
+
+}
+
+
+.dosis-regular {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dosis-bold {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+.dosis-light {
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
 
 html, body {
     height: 100%;
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary-light);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -36,7 +77,7 @@ app-root {
 }
 
 h1, h2, h3 {
-    font-family: var(--font-primary);
+    font-family: var(--font-primary-poiret);
     color: var(--color-text-dark);
 }
 
@@ -68,6 +109,10 @@ h1, h2, h3 {
 
 .animate-slide-up {
     animation: slideUp 0.7s ease-out;
+}
+
+.center {
+    text-align: center !important;
 }
 
 /* Accessibility Utilities */
