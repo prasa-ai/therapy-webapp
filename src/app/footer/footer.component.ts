@@ -13,9 +13,9 @@ export class FooterComponent implements OnInit {
     }
   }
 
-  phone: number = 1234567890;
-  email: string = 'info@example.com';
-  address: string = '123 Honeycomb Lane, Sweet City, SC 12345';
+  phone: number = 8047355268;
+  email: string = 'jamie@nex-phase.com';
+  address: string = '9844 Lori Rd, Ste 100, Chesterfield, VA';
 
   ngOnInit(): void {
   }

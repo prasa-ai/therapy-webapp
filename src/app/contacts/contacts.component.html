@@ -5,7 +5,7 @@
             <div class="left-selection">
                 <div class="contact-selection">
                     <div class="option" (click)="selectOption('email')" routerLink="email">E-mail</div>
-                    <div class="option" (click)="selectOption('phone')" routerLink="phone">Phone</div>
+                    <div class="option" (click)="selectOption('phone')" routerLink="phone">Location & Phone</div>
                 </div>
             </div>
             <div class="right-selection">
@@ -13,6 +13,44 @@
                     <router-outlet></router-outlet>
                 </div>
             </div>
+            <div>
+                <!--highly customized socdoc button.-->
+                <a href='https://www.zocdoc.com/practice/ironbridge-counseling-nexphase-therapy-138965?lock=true&isNewPatient=false&referrerType=widget' 
+                class='custom-zocdoc-link' 
+                target='_blank'>
+                <p-button label="Schedule with Zocdoc" class="btn-zocdoc-custom"></p-button>
+                </a>
+            </div>
+            
         </div>
+
+       
     </div>
+
+
+    <!--this zocdoc button wasn't enough to customize -->
+    <!-- <div class="booking-widget-wrapper">
+        <div class="zocdoc-widget">
+       
+            <div>
+                <a style='display: block' href='https://www.zocdoc.com/practice/ironbridge-counseling-nexphase-therapy-138965?lock=true&isNewPatient=false&referrerType=widget' 
+                class='zd-plugin' data-type='book-button' data-practice-id='138965' title='Ironbridge Counseling/neXphase Therapy'>
+                    <img src='https://offsiteSchedule.zocdoc.com/images/remote/zd_bookonline_162x48.png?type=bobjs&monolith_provider_id=138965&practice_id=pt_T2Cw_YuTKEyzxcIQDfKcug' 
+                    alt='Ironbridge Counseling/neXphase Therapy' 
+                    title='Ironbridge Counseling/neXphase Therapy' 
+                    style='background-color:#2D361F; border: 0'/>
+                </a>
+            </div>
+            <script>(function (d) {var script = d.createElement('script'); script.type = 'text/javascript'; script.async = true; script.src = 'https://offsiteschedule.zocdoc.com/plugin/embed';var s = d.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);})(document);
+            </script>
+        </div>
+    </div> -->
+
+   
 </div>
+
+
+
+
+
+

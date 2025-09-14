@@ -10,7 +10,7 @@
         font-weight: 550;
         text-align: center;
         color: var(--color-text-dark);
-        margin-bottom: 4rem;
+        // margin-bottom: 4rem;
     }
 
     .appointments-container {
@@ -21,6 +21,10 @@
         padding: 2rem;
         margin-bottom: 4rem;
     }
+}
+
+.zocdoc-container {
+    text-align: center;
 }
 
 .page-header {

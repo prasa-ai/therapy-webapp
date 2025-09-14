@@ -75,6 +75,35 @@
     }
 }
 
+
+.booking-widget-wrapper {
+    margin-top: 2rem;
+    text-align: center;
+    
+    .zocdoc-widget {
+        display: inline-block;
+        background: #2D361F;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 10px;
+        font-weight: 600;
+        text-decoration: none;
+
+        img {
+            //filter: hue-rotate(90deg) saturate(0.5) brightness(0.3);
+            // filter: hue-rotate(75deg) saturate(0.4) brightness(0.35);
+            filter: hue-rotate(95deg) saturate(0.3) brightness(0.75);
+            // display: none;
+            /* Experiment with values to match your purple theme */
+          }
+    }
+
+    .zocdoc-widget::after {
+        content: "Book Appointment";
+        
+      }
+  }
+
 // Media queries for responsive design
 @media screen and (max-width: 991px) {
     .contacts-page {

@@ -45,7 +45,7 @@
           </div>
           <div class="col-lg-5 col-md-12">
             <div class="image-wrapper">
-              <img src="assets/images/undraw_female-avatar.svg" alt="Professional Therapy" class="section-image">
+              <img src="assets/images/profile.jpg" alt="Professional Therapy" class="section-image">
             </div>
           </div>
         </div>
@@ -171,11 +171,22 @@
                     during a consultation.
                   </p>
                   <div class="cta-buttons">
-                    <p-button 
+                    <!-- <p-button 
                       label="Schedule Consultation"
                       class="btn-primary-cta"
                       (click)="scheduleConsultation()">
-                    </p-button>
+                    </p-button> -->
+
+
+                    <div class="zocdoc-custom">
+                        <!--highly customized socdoc button.-->
+                        <a href='https://www.zocdoc.com/practice/ironbridge-counseling-nexphase-therapy-138965?lock=true&isNewPatient=false&referrerType=widget' 
+                        class='custom-zocdoc-link' 
+                        target='_blank'>
+                        <p-button label="Schedule with Zocdoc" class="btn-zocdoc-custom"></p-button>
+                        </a>
+                    </div>
+            
                     <p-button 
                       label="Contact Us"
                       class="btn-secondary-cta"
@@ -188,7 +199,8 @@
             </div>
             <div class="col-lg-4 col-md-12">
               <div class="insurance-icon-wrapper">
-                <i class="fas fa-shield-alt insurance-icon"></i>
+                <img class="insurance-icon" src="assets/images/undraw_world_bdnk.svg">
+                <!-- <i class="fas fa-shield-alt insurance-icon"></i> -->
                 <p class="icon-caption">Comprehensive Coverage Options</p>
               </div>
             </div>

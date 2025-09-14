@@ -25,6 +25,8 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 3.5rem;
         font-weight: 300;
+        color: #D6E0B8;
+        margin-top: 50px;
         margin-bottom: 1rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         
@@ -111,6 +113,7 @@
       justify-content: center;
       align-items: center;
       padding: 2rem;
+      border-radius: 5px;
       
       @media (max-width: 768px) {
         padding: 1rem 0;
@@ -122,6 +125,7 @@
         max-width: 350px;
         height: auto;
         object-fit: contain;
+        border-radius: 200px;
         
         @media (max-width: 768px) {
           max-width: 250px;
@@ -403,6 +407,7 @@
       }
 
       .insurance-icon {
+        width: 350px;
         font-size: 4rem;
         color: #bc5684;
         margin-bottom: 1rem;
@@ -410,11 +415,17 @@
       }
 
       .icon-caption {
-        color: #B5CBBA;
+        color: #2D361F;
         font-size: 1rem;
         font-weight: 500;
       }
     }
+  }
+
+
+  .btn-zocdoc-custom {
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
   }
 }
 
@@ -450,10 +461,11 @@
 
   .btn-secondary-cta {
     .p-button {
-      background: transparent;
+      // background: transparent;
+      background-color: #2d361f;
       border: 2px solid #B5CBBA;
       color: #B5CBBA;
-      padding: 1rem 2rem;
+      // padding: 1rem 2rem;
       transition: all 0.3s ease;
       height: auto;
       border-radius: 10px;

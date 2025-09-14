@@ -77,7 +77,7 @@ export class AboutMeComponent implements OnInit {
    */
   contactUs(): void {
     // Navigate to general contact page
-    this.router.navigate(['/contact']);
+    this.router.navigate(['/contacts']);
   }
 
   /**

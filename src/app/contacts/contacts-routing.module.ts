@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { ContactsComponent } from "./contacts.component";
 import { RouterModule } from "@angular/router";
 import { EmailComponent } from "./email/email.component";
+import { ButtonModule } from "primeng/button";
 import { PhoneComponent } from "./phone/phone.component";
 
 const routes = [
@@ -20,6 +21,7 @@ const routes = [
         PhoneComponent
     ],
     imports: [
+        ButtonModule,
         RouterModule.forChild(routes)
     ]
 })
