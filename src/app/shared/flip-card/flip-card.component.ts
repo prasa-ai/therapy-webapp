@@ -27,6 +27,7 @@ export interface CardData {
 
 export class FlipCardComponent {
   @Input() cardId: string = '';
+  @Input() cardIcon: string = '';
   @Input() frontContent: string = '';
   @Input() backContent: string = '';
   @Input() isFlipped: boolean = false;

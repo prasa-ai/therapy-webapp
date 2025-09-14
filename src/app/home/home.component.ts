@@ -93,39 +93,45 @@ export class HomeComponent implements OnInit, OnDestroy {
   cardContents = [
     {
       id: 'card1',
-      front: 'Service 1',
-      back: 'Card 1 back',
-      details: "These are the details for card 1."
+      icon: 'pi pi-users',
+      front: 'Individual & Family Therapy',
+      back: 'Individual, Couple, Family Therapy (CBT, DBT, Solution Focus, trauma-focused, burnout recovery).',
+      details: ""
     },
     {
       id: 'card2',
-      front: 'Service 2',
-      back: 'Card 2 back',
-      details: "These are the details for card 2."
+      icon: 'pi pi-heart-fill',
+      front: 'Marriage Counseling',
+      back: 'Marriage, Relationship conflict, Coparenting, & Pre/Post Marriage.',
+      details: ""
     },
     {
       id: 'card3',
-      front: 'Service 3',
-      back: 'Service details',
-      details: "These are the details for card 3."
+      icon: 'pi pi-compass',
+      front: 'Career Transitions',
+      back: 'Career Transitions and Burnouts.',
+      details: ""
     },
     {
       id: 'card4',
-      front: 'Service 4',
-      back: 'Service details',
-      details: "These are the details for card 4."
+      icon: 'pi pi-bolt',
+      front: 'Crisis Intervention',
+      back: 'Crisis Intervention and Risk Assessment.',
+      details: ""
     },
     {
       id: 'card5',
-      front: 'Service 5',
-      back: 'Service details',
-      details: "These are the details for card 5."
+      icon: 'pi pi-eye',
+      front: 'Forensic Evaluations - Immigration',
+      back: 'Immigration Evaluations (Asylum, VAWA, U-visa, T-visa).',
+      details: ''
     },
     {
       id: 'card6',
-      front: 'Service 6',
-      back: 'Service details',
-      details: "These are the details for card 6."
+      icon: 'pi pi-comments',
+      front: 'Consulting Services',
+      back: 'Consulting Services (for community agencies and legal partners).',
+      details: ""
     }
   ];
 

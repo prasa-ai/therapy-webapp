@@ -16,12 +16,12 @@ import { DialogModule } from 'primeng/dialog';
 import { RouterModule } from '@angular/router';
 import { CalendarModule } from 'primeng/calendar';
 import { StepsModule } from 'primeng/steps';
-import { Card1Component } from './cards-details-components/card1/card1.component';
-import { Card2Component } from './cards-details-components/card2/card2.component';
-import { Card3Component } from './cards-details-components/card3/card3.component';
-import { Card4Component } from './cards-details-components/card4/card4.component';
-import { Card5Component } from './cards-details-components/card5/card5.component';
-import { Card6Component } from './cards-details-components/card6/card6.component';
+// import { Card1Component } from './cards-details-components/card1/card1.component';
+// import { Card2Component } from './cards-details-components/card2/card2.component';
+// import { Card3Component } from './cards-details-components/card3/card3.component';
+// import { Card4Component } from './cards-details-components/card4/card4.component';
+// import { Card5Component } from './cards-details-components/card5/card5.component';
+// import { Card6Component } from './cards-details-components/card6/card6.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { HoneycombInterceptorService } from './services/honeycomb-interceptor.service';
@@ -47,12 +47,12 @@ import { WebParallaxComponent } from './shared/web-parallax/web-parallax.compone
     AppointmentsComponent,
     LoginPageComponent,
     AboutMeComponent,
-    Card1Component,
-    Card2Component,
-    Card3Component,
-    Card4Component,
-    Card5Component,
-    Card6Component,
+    // Card1Component,
+    // Card2Component,
+    // Card3Component,
+    // Card4Component,
+    // Card5Component,
+    // Card6Component,
     FooterComponent,
     PhonePipe,
     AdminComponent,

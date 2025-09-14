@@ -58,10 +58,17 @@
 		</div>
 	</div>
 	
-
+	<!--who we are-->
 	<div class="who-we-are">
 		<h1 class="who-we-are-title">Who We are</h1>
-		<h5 class="who-we-are-punch-line">Results-Driven. Evidence-Based. Deeply Human. Trauma-Informed. Solution-Focused. Relentlessly Compassionate. </h5>
+		<h5 class="who-we-are-punch-line"> 
+			<span class="who-we-are-punch-word">Results-Driven</span>
+			<span class="who-we-are-punch-word">Evidence-Based</span>
+			<span class="who-we-are-punch-word">Deeply Human</span>
+			<span class="who-we-are-punch-word">Trauma-Informed</span>
+			<span class="who-we-are-punch-word">Solution-Focused</span>
+			<span class="who-we-are-punch-word">Relentlessly Compassionate</span>
+		</h5>
 
 		<p class="who-we-are-description">
 			Your healing journey deserves more than generic approaches and surface-level 
@@ -88,57 +95,72 @@
 	<!--Why choose us -->
 	<div class="why-honeycomb">
 		<h1 class="why-honeycomb-title">Why Choose Us?</h1>
-
+		<!--Experts-->
 		<div class="why-honeycomb-section row">
+			<div class="why-honeycomb-writing col-md-7 col-12 order-md-1 order-2">
+				<h2 class="why-honeycomb-subtitle">Experienced professional</h2>
+				<p class="why-honeycomb-description">
+					With over 12 years of clinical and case management experience, I help individuals move through anxiety, 
+					depression, trauma, life transitions, and identity questions with clarity and purpose. My clients 
+					often come to me during moments of crisis or change, looking for insight, grounding, and sustainable paths forward. 
+					<a routerLink="/about-us" outerLinkActive="active-link" class="nav-link">Click here to see our approaches</a>
+				</p>
+			</div>
+			<div class="why-honeycomb-img-right col-md-5 col-12 order-md-2 order-1">
+				<img class="why-honeycomb-img" src="assets/images/undraw_instant-analysis_idb3.svg" alt="Privacy Image">
+			</div>
+		</div>
+		<!--privacy-->
+		<div class="why-honeycomb-section row">
+			<div class="why-honeycomb-img-left col-md-5 col-12">
+				<img class="why-honeycomb-img" src="assets/images/undraw_security_0ubl.svg" alt="Privacy Image">
+			</div>
 			<div class="why-honeycomb-writing col-md-7 col-12 order-md-1 order-2">
 				<h2 class="why-honeycomb-subtitle">We Value Your Privacy</h2>
 				<p class="why-honeycomb-description">At Nexphase, privacy isn't just a policy—it's your fundamental right, and 
 					we defend it as fiercely as you would. Privacy is sacred to us and it isn't negotiable. So you can be your
 					complete self during your sessions.</p>
 			</div>
-			<div class="why-honeycomb-img-right col-md-5 col-12 order-md-2 order-1">
-				<img class="why-honeycomb-img" src="assets/images/undraw_security_0ubl.svg" alt="Privacy Image">
-			</div>
+			
 		</div>
-
+		<!--online and in-person-->
 		<div class="why-honeycomb-section row">
-			<div class="why-honeycomb-img-left col-md-5 col-12">
-				<img class="why-honeycomb-img" src="assets/images/undraw_social-networking_v4z1.svg" alt="Session Image">
-			</div>
 			<div class="why-honeycomb-writing col-md-7 col-12">
 				<h2 class="why-honeycomb-subtitle">Online and In-Person sessions</h2>
-				<p class="why-honeycomb-description">We understand everyone has different needs and we are here to help you in the way that best fits your schedule.</p>
+				<p class="why-honeycomb-description">
+					At our practice, we understand that effective therapy begins with accessibility and convenience. 
+					We offer both secure online telehealth sessions and traditional in-person appointments, recognizing that 
+					each client's circumstances, and comfort levels are unique. Whether its virtual sessions or
+					in-person meetings, I provide the same high standard of compassionate, evidence-based care. 
+					Our flexible approach ensures that your journey toward mental wellness fits seamlessly into your life.
+				</p>
 			</div>
-		</div>
-
-		<div class="why-honeycomb-section row">
-			<div class="why-honeycomb-writing col-md-7 col-12 order-md-1 order-2">
-				<h2 class="why-honeycomb-subtitle">Experienced professionals</h2>
-				<p class="why-honeycomb-description">Over 15 years of experience, we have extensive expertise in handling a wide range of cases with varying levels of complexity. This enables us to recognize the importance of a personalized approach for each case.</p>
-			</div>
-			<div class="why-honeycomb-img-right col-md-5 col-12 order-md-2 order-1">
-				<img class="why-honeycomb-img" src="assets/images/undraw_instant-analysis_idb3.svg" alt="Privacy Image">
+			<div class="why-honeycomb-img-right why-honeycomb-img-right col-md-5 col-12 order-md-2 order-1">
+				<img class="why-honeycomb-img" src="assets/images/undraw_social-networking_v4z1.svg" alt="Session Image">
 			</div>
 		</div>
 	</div>
 
 
+	<div class="our-services">
+		<h1 class="our-services-title">Our Services</h1>
+	</div>
 
-
-
-	<div class="header">
+	<!--our services-->
+	<!-- <div class="header">
 		<h2 class="header-title">Our Services</h2>
-	</div>
+	</div> -->
 	
 	<div class='cards-section'>
 		<div class="cards-container">
 			<div class="description">
-				<p class="description-paragraph">Explore our range of therapeutic services designed to support your well-being journey.</p>
+				<p class="description-paragraph">Discover our range of therapeutic services tailored to meet you exactly where you are in your healing journey</p>
 			</div>
 			
 			<div class="cards">
 				<flip-card *ngFor="let card of cardContents"
 					[cardId]="card.id"
+					[cardIcon]="card.icon"
 					[frontContent]="card.front"
 					[backContent]="card.back"
 					[isFlipped]="flippedCardId === card.id"

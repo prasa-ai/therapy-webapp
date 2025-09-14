@@ -25,7 +25,7 @@ header {
                 margin-right: 1rem;
             
                 img {
-                    max-height: 40px;
+                    max-height: 55px;
                 }
             }
 
@@ -37,14 +37,14 @@ header {
                     p {
                         margin: 0;
                         font-size: 2.0rem;
-                        font-weight: 400;
+                        font-weight: 600;
                         //font-family: 'Montserrat', sans-serif !important;
-                        color:#2d361f;//  #bac0b8;
+                        color:#b13066;//  #bac0b8;
                         transition: color 0.3s ease;
                     }
 
                     &:hover p {
-                        color: #A67C52;
+                        color: #b13066;
                     }
                 }
             }
@@ -93,7 +93,7 @@ header {
                 padding: 0;
 
                 ::first-letter {
-                    color: #A67C52;
+                    color: #b13066; // #A67C52;
                 }
     
                 li {
@@ -109,7 +109,7 @@ header {
                     }
 
                     :hover {
-                        color: #A67C52;
+                        color: #b13066; // #A67C52;
                     }
 
                     ::before {

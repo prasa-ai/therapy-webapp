@@ -1,42 +1,200 @@
-<div class="about-page">
-    <h1 class="about-title">About us</h1>
-    <!-- <div class="about-container"> -->
+<!-- <app-forcegraph-network></app-forcegraph-network> -->
+        
 
-        <!-- <ng-container *ngIf="!resumeActive; else resumeView">
-            <div class="about-section row">
-                <div class="about-img col-5">
-                    <img class="about-img" src="assets/images/undraw_analyze_0hyg.svg" alt="Privacy Image">
+
+<!-- about-us.component.html -->
+<div class="about-us-container">
+  
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-content">
+        <h1 class="page-title">About Us</h1>
+        <p class="hero-subtitle">Professional, compassionate care tailored to your unique journey</p>
+      </div>
+    </div>
+  
+    <!-- Professional Background Section -->
+    <div class="professional-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 col-md-12">
+            <div class="content-wrapper">
+              <h2 class="section-title">Professional Experience & Approach</h2>
+              <div class="professional-content">
+                <p class="intro-paragraph">
+                  With over 12 years of clinical and case management experience, I help individuals move through anxiety, 
+                  depression, trauma, life transitions, and identity questions with clarity and purpose. My clients often 
+                  come to me during moments of crisis or change, looking for insight, grounding, and sustainable paths forward.
+                </p>
+                
+                <p class="approach-paragraph">
+                  My approach is person-centered, collaborative, and informed by a diverse professional background that 
+                  includes forensic psychology, legal systems, crisis intervention, and community-based care. I have 
+                  experience working with serious mental illness, dual diagnoses, and individuals navigating complex 
+                  life systems, including disability services, court processes, and social supports.
+                </p>
+                
+                <p class="specialization-paragraph">
+                  In addition to therapy, I also specialize in comprehensive immigration evaluations and career counseling, 
+                  blending psychological insight with deep knowledge of systems. Whether you're in immediate crisis or 
+                  facing long-term questions about direction, relationships, or meaning, I provide a compassionate, 
+                  structured space to explore what matters most to you.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12">
+            <div class="image-wrapper">
+              <img src="assets/images/undraw_female-avatar.svg" alt="Professional Therapy" class="section-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Who We Work With Section -->
+    <div class="clients-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-12">
+            <div class="image-wrapper">
+              <img src="assets/images/undraw_people.svg" alt="Diverse Clients" class="section-image">
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-12">
+            <div class="content-wrapper">
+              <h2 class="section-title">Who We Work With</h2>
+              <div class="clients-grid">
+                <div class="client-item">
+                  <div class="client-icon">
+                    <i class="fas fa-child"></i>
+                  </div>
+                  <div class="client-text">
+                    <h4>Youth and Children (3-17)</h4>
+                    <p>Supporting young individuals with depressive symptoms, anxiety, and stress</p>
+                  </div>
                 </div>
-                <div class="about-writing col-7">
-                    <h2 class="about-subtitle">Jamie Plesko</h2>
-                    <p class="about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                
+                <div class="client-item">
+                  <div class="client-icon">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="client-text">
+                    <h4>Adults (18–65)</h4>
+                    <p>Working with serious mental illness or dual diagnoses</p>
+                  </div>
+                </div>
+                
+                <div class="client-item">
+                  <div class="client-icon">
+                    <i class="fas fa-heart-broken"></i>
+                  </div>
+                  <div class="client-text">
+                    <h4>Trauma & Crisis</h4>
+                    <p>Clients experiencing burnout, depression, anxiety, stress, or trauma-related disorders</p>
+                  </div>
+                </div>
+                
+                <div class="client-item">
+                  <div class="client-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="client-text">
+                    <h4>Couples & Families</h4>
+                    <p>Addressing conflict, divorce proceedings, or co-parenting concerns</p>
+                  </div>
+                </div>
+                
+                <div class="client-item">
+                  <div class="client-icon">
+                    <i class="fas fa-globe"></i>
+                  </div>
+                  <div class="client-text">
+                    <h4>Immigrants & Legal Services</h4>
+                    <p>Families needing legal or court-related mental health services</p>
+                  </div>
+                </div>
+                
+                <div class="client-item">
+                  <div class="client-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div class="client-text">
+                    <h4>Community Organizations</h4>
+                    <p>Supporting attorneys, case managers, and underserved populations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Insurance Section -->
+    <div class="insurance-section">
+      <div class="container">
+        <div class="insurance-card">
+          <div class="row align-items-center">
+            <div class="col-lg-8 col-md-12">
+              <div class="insurance-content">
+                <h2 class="section-title">Insurance & Payment Options</h2>
+                <p class="insurance-intro">
+                  We strive to make mental health care accessible and work with various insurance providers 
+                  and payment options to meet your needs.
+                </p>
+                
+                <div class="insurance-details">
+                  <div class="insurance-item">
+                    <h4>Accepted Insurance Plans:</h4>
+                    <ul class="insurance-list">
+                      <li>Kaiser Permanente of the Mid Atlantic - Primary Insurance</li>
+                      <li>Medicare Advantage and Medicaid</li>
+                      <li>Optum Medicaid VA</li>
+                      <li>United Healthcare Medicare Advantage</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="insurance-item">
+                    <h4>Additional Options:</h4>
+                    <ul class="insurance-list">
+                      <li>Self-pay arrangements available</li>
+                      <li>Immigration evaluation fees (separate consultation)</li>
+                      <li>Grant-supported programs for underserved populations</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="contact-cta">
+                  <p class="cta-text">
+                    <strong>Ready to get started?</strong> Let's discuss copays, self-pay options, and evaluation fees 
+                    during a consultation.
+                  </p>
+                  <div class="cta-buttons">
                     <p-button 
-                        label="View my Resume"
-                        class="resume-btn p-button-raised p-button-rounded" 
-                        (click)="viewResume()"
-                    ></p-button>
+                      label="Schedule Consultation"
+                      class="btn-primary-cta"
+                      (click)="scheduleConsultation()">
+                    </p-button>
+                    <p-button 
+                      label="Contact Us"
+                      class="btn-secondary-cta"
+                      [outlined]="true"
+                      (click)="contactUs()">
+                    </p-button>
+                  </div>
                 </div>
+              </div>
             </div>
-        </ng-container>
-        
-        <ng-template #resumeView>
-            <div class="resume">
-                <div>
-                    Load the resume here.
-                </div>
-
-                <p-button
-                    label="Back"
-                    class="back-btn p-button-raised p-button-rounded"
-                    (click)="backToOverview()"
-                ></p-button>
+            <div class="col-lg-4 col-md-12">
+              <div class="insurance-icon-wrapper">
+                <i class="fas fa-shield-alt insurance-icon"></i>
+                <p class="icon-caption">Comprehensive Coverage Options</p>
+              </div>
             </div>
-        </ng-template> -->
-
-        
-        <app-forcegraph-network></app-forcegraph-network>
-        
-
-    <!-- </div> -->
-</div>
-
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
