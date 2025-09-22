@@ -91,6 +91,41 @@
 	</div>
 
 
+
+	<div class="our-services">
+		<h1 class="our-services-title">Our Services</h1>
+	</div>
+
+	<!--our services-->
+	<!-- <div class="header">
+		<h2 class="header-title">Our Services</h2>
+	</div> -->
+	
+	<div class='cards-section'>
+		<div class="cards-container">
+			<div class="description">
+				<p class="description-paragraph">Discover our range of therapeutic services tailored to meet you exactly where you are in your healing journey</p>
+			</div>
+			
+			<div class="cards">
+				<flip-card *ngFor="let card of cardContents"
+					[cardId]="card.id"
+					[cardIcon]="card.icon"
+					[frontContent]="card.front"
+					[backContent]="card.back"
+					[isFlipped]="flippedCardId === card.id"
+					(showDetails)="displayCardDetails($event)"
+					(cardToggled)="onCardToggled(card.id)">
+				</flip-card>
+			</div>
+		</div>
+	</div>
+	
+	<div class="card-detail" *ngIf="detailView">
+	  	{{ cardDetail }}
+	</div>
+
+
 	<!--Why choose us -->
 	<div class="why-honeycomb">
 		<h1 class="why-honeycomb-title">Why Choose Us?</h1>
@@ -139,41 +174,6 @@
 			</div>
 		</div>
 	</div>
-
-
-	<div class="our-services">
-		<h1 class="our-services-title">Our Services</h1>
-	</div>
-
-	<!--our services-->
-	<!-- <div class="header">
-		<h2 class="header-title">Our Services</h2>
-	</div> -->
-	
-	<div class='cards-section'>
-		<div class="cards-container">
-			<div class="description">
-				<p class="description-paragraph">Discover our range of therapeutic services tailored to meet you exactly where you are in your healing journey</p>
-			</div>
-			
-			<div class="cards">
-				<flip-card *ngFor="let card of cardContents"
-					[cardId]="card.id"
-					[cardIcon]="card.icon"
-					[frontContent]="card.front"
-					[backContent]="card.back"
-					[isFlipped]="flippedCardId === card.id"
-					(showDetails)="displayCardDetails($event)"
-					(cardToggled)="onCardToggled(card.id)">
-				</flip-card>
-			</div>
-		</div>
-	</div>
-	
-	<div class="card-detail" *ngIf="detailView">
-	  	{{ cardDetail }}
-	</div>
-
 	
 </div>
 
