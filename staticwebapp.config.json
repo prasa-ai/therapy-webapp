@@ -1,0 +1,28 @@
+{
+    "routes": [
+        {
+          "route": "/*",
+          "redirect": "https://nex-phase.net{uri}",
+          "statusCode": 301,
+          "headers": {
+            "Host": "www.nex-phase.net"
+          }
+        },
+        {
+          "route": "/*",
+          "allowedRoles": ["anonymous"]
+        }
+    ],
+    "responseOverrides": {
+      "401": {
+        "redirect": "/index.html",
+        "statusCode": 302
+      }
+    },
+    "globalHeaders": {
+      "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+    },
+    "mimeTypes": {
+      ".json": "text/json"
+    }
+  }
