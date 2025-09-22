@@ -7,10 +7,6 @@
           "headers": {
             "Host": "www.nex-phase.net"
           }
-        },
-        {
-          "route": "/*",
-          "allowedRoles": ["anonymous"]
         }
     ],
     "responseOverrides": {
